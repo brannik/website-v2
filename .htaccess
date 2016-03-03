@@ -1,0 +1,3 @@
+RewriteCond %{HTTP_HOST}   !^frostmourne\.wow\.com [NC]
+RewriteCond %{HTTP_HOST}   !^$
+RewriteRule ^/(.*)         http://frostmourne.wow.com/$1 [L,R]

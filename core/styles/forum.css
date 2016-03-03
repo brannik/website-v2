@@ -1,0 +1,81 @@
+#forumForm{
+	width: 90%;
+	height: 200px;
+	margin-left: 5%;
+	margin-top: 20px;
+	display: float;
+	background-color: #333;
+	box-shadow: 1px 1px 1px lightblue, 0 0 25px skyblue, 0 0 3px blue;
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+table{
+	margin-right: 10px;
+}
+#TitleRow, #TitleRow a{
+	margin-top: 5px;
+	color: white;
+	width: 98%;
+	height: 30px;
+	font-size: 20;
+	text-decoration: none;
+	color: skyblue;
+	text-shadow: 1px 1px 1px lightblue, 0 0 10px skyblue, 0 0 3px blue;
+}
+#DescrCell{
+	width: 98%;
+	height: 120px;
+	background-color: #444;
+	color: skyblue;
+
+}
+#BottomCell{
+	width: 98%;
+	height: 30px;
+	color: lightblue;
+}
+img.admin{
+	width: 170px;
+	height: 170px;
+	margin: 10px;
+	box-shadow: 1px 1px 1px lightblue, 0 0 25px skyblue, 0 0 3px blue;
+}
+img.noAdmin{
+	width: 170px;
+	height: 170px;
+	margin: 10px;
+	box-shadow: 0;
+}
+.replyForum{
+	width: 90%;
+	height: 150px;
+	margin-left: 5%;
+	margin-top: 20px;
+	display: float;
+	background-color: #333;
+	box-shadow: 1px 1px 1px lightblue, 0 0 25px skyblue, 0 0 3px blue;
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.replyTable{
+	width: 100%;
+	height: 100%;
+	color: skyblue;
+}
+#replyTitle{
+	font-size: 18px;
+	text-indent: 70px;
+	font-weight: bold;
+}
+
+#replyText{
+	text-indent: 15px;
+}
+text::first-letter{
+	text-transform: uppercase;
+}
+
+#replyAutor{
+	text-align: right;
+}

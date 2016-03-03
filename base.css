@@ -1,0 +1,64 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+body{
+	background-image:url('./resources/bg.jpg');
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+#navigation{
+	border: 0;
+	margin-left: 10%;
+}
+#banner{
+	width: 100%;
+	height: 400px;
+}
+#main{
+	width: 100%;
+	height: 1000px;
+}
+#MainFrame{
+	width: 80%;
+	height: 100%;
+	border: 0;
+	margin-left: 10%;
+	overflow:hidden;
+}
+#footer{
+	width: 100%;
+	height: 60px;
+}
+#copy{
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+#navFrame{
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+#bannerFrame{
+	width: 80%;
+	height: 100%;
+	border: 0;
+	margin-left: 10%;
+}
+#announce{
+	width: 80%;
+	height: 40px;
+	border: 0;
+	margin-left: 10%;
+	margin-top: 15px;
+	overflow:hidden;
+}
+#announceFrame{
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}

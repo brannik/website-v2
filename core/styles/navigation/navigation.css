@@ -1,0 +1,91 @@
+#menu{
+	overflow: hidden;
+    background-color: #333;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	box-shadow: 1px 1px 1px lightblue, 0 0 10px skyblue, 0 0 3px blue;
+	margin-top: 10px;
+}
+#MenuList{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+	float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #222;
+	box-shadow: 1px 1px 1px lightblue, 0 0 10px skyblue, 0 0 3px blue;
+}
+#statusDiv{
+	float: right;
+}
+#mainMenuDiv{
+	float: left;
+}
+#stUL{
+	overflow: hidden;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#stUL li{
+	float: right;
+}
+#stUL li a{
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#stUL li a:hover{
+	background-color: #222;
+	box-shadow: 1px 1px 1px lightblue, 0 0 10px skyblue, 0 0 3px blue;
+}
+
+.waitingForConnection {
+  animation: blinker 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+}
+@keyframes blinker {  
+  from { opacity: 1; color: white;}
+  to { opacity: 0.2; color: skyblue; }
+}
+#stUL li a.admin{
+	display: block;
+    color: darkorange;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	text-transform:uppercase;
+	text-shadow: 0px 1px 1px #4d4d4d;
+	
+	letter-spacing: 0.0625em;
+}
+#stUL li a.gm{
+	display: block;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+#stUL li a.donor{
+	display: block;
+    color: yellow;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;	
+}

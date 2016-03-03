@@ -1,0 +1,22 @@
+ul{
+	list-style-type: none;
+	color: skyblue;
+	font-size: large;
+
+}
+ul ul{
+	display: none;
+	color: skyblue;
+	padding-left: 20px;
+}
+ul li:hover{
+	cursor: pointer; cursor: hand; 
+}
+ul a{
+	color: skyblue;
+	text-decoration: none;
+}
+a:hover{
+	color: lightblue;
+	text-shadow: 1px 1px 1px lightblue, 0 0 2px skyblue, 0 0 3px blue;
+}

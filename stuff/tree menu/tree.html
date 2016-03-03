@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript" > </script>
+	
+	<script type="text/javascript">
+
+		$( document ).ready( function( ) {
+				$( '.tree li' ).each( function() {
+						if( $( this ).children( 'ul' ).length > 0 ) {
+								$( this ).addClass( 'parent' );     
+						}
+				});
+				
+				$( '.tree li.parent > a' ).click( function( ) {
+						$( this ).parent().toggleClass( 'active' );
+						$( this ).parent().children( 'ul' ).slideToggle( 'fast' );
+				});
+				
+				$( '#all' ).click( function() {
+					
+					$( '.tree li' ).each( function() {
+						$( this ).toggleClass( 'active' );
+						$( this ).children( 'ul' ).slideToggle( 'fast' );
+					});
+				});
+				
+				$( '.tree li' ).each( function() {
+						$( this ).toggleClass( 'active' );
+						$( this ).children( 'ul' ).slideToggle( 'fast' );
+				});
+				
+		});
+        
+	</script>
+</head>
+<body>
+	
+<div id="wrapper">
+<div class="tree">
+		
+		
+<ul>
+		<li><a>Armor</a>
+			<ul>
+				<li><a href="../core/shop/items.php?itemtype=armor_cloth" target="ItemsFrame">Cloth</a></li>
+				<li><a href="../core/shop/items.php?itemtype=armor_leather" target="ItemsFrame">Leather</a></li>
+				<li><a href="../core/shop/items.php?itemtype=armor_mail" target="ItemsFrame">Mail</a></li>
+				<li><a href="../core/shop/items.php?itemtype=armor_plate" target="ItemsFrame">Plate</a></li>
+				<li><a href="../core/shop/items.php?itemtype=armor_shield" target="ItemsFrame">Shields</a></li>
+			</ul>
+		</li>
+		<li><a>Weapons</a>
+			<ul>
+				<li><a href="../core/shop/items.php?itemtype=weapon_2hsword" target="ItemsFrame">2h Sword</a></li>
+				<li><a href="../core/shop/items.php?itemtype=weapon_2hmace" target="ItemsFrame">2h Mace</a></li>
+				<li><a href="../core/shop/items.php?itemtype=weapon_2haxe" target="ItemsFrame">2h Axe</a></li>
+				
+				<li><a href="../core/shop/items.php?itemtype=weapon_1hsword" target="ItemsFrame">1h Sword</a></li>
+				<li><a href="../core/shop/items.php?itemtype=weapon_1hmace" target="ItemsFrame">1h Mace</a></li>
+				<li><a href="../core/shop/items.php?itemtype=weapon_1haxe" target="ItemsFrame">1h Axe</a></li>
+				
+				<li><a href="../core/shop/items.php?itemtype=weapon_dagger" target="ItemsFrame">Dagger</a></li>
+				<li><a href="../core/shop/items.php?itemtype=weapon_staff" target="ItemsFrame">Staff</a></li>
+				<li><a href="../core/shop/items.php?itemtype=weapon_wand" target="ItemsFrame">Wand</a></li>
+				
+				<li><a href="../core/shop/items.php?itemtype=weapon_offhand" target="ItemsFrame">Offhand</a></li>
+			</ul>
+		</li>
+		<li><a href="../core/shop/items.php?itemtype=mount" target="ItemsFrame">Mounts</a></li>
+		<li><a href="../core/shop/items.php?itemtype=pet" target="ItemsFrame">Pets</a></li>
+</ul>
+</div>
+</div>
+
+</body>
+</html>

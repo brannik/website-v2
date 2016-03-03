@@ -1,0 +1,14 @@
+$xml=simplexml_load_file('../themes/themes.xml') or die("Error: Cannot create object");
+	$ThemeCount = $xml->counter[0]->counts;
+	echo '<ul id="MenuList">';
+		echo'<li>';
+			echo '<select>';
+			for($i=0;$i<$ThemeCount;$i++){
+				echo'<option value="'. $xml->theme[$i]->name .'">'. $xml->theme[$i]->name .'</option>';
+			}
+			echo '</select>';
+		echo'</li>';
+		echo '<li>Menu 1</li>';
+		echo '<li>Menu 2</li>';
+		echo '<li>Menu 3</li>';
+	echo '</ul>';

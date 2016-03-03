@@ -1,0 +1,119 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="base.css">
+	<link rel="stylesheet" href="../core/styles/navigation/sticky-navigation.css" />
+	<link rel="stylesheet" href="../core/styles/snow.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<link rel="shortcut icon" type="image/x-icon" href="../resources/icons/icon.gif" />
+	<title>FrostMourne-WoW</title>
+<script>
+window.onload = function startUp(){
+	
+}
+$(function() {
+
+	// grab the initial top offset of the navigation 
+	var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+	
+	// our function that decides weather the navigation bar should have "fixed" css position or not.
+	var sticky_navigation = function(){
+		var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+		
+		// if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
+		if (scroll_top > sticky_navigation_offset_top) { 
+			$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
+		} else {
+			$('#sticky_navigation').css({ 'position': 'relative' }); 
+		}   
+	};
+	
+	// run our function on load
+	sticky_navigation();
+	
+	// and run it again every time you scroll
+	$(window).scroll(function() {
+		 sticky_navigation();
+	});
+	
+	// NOT required:
+	// for this demo disable all links that point to "#"
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); 
+	});
+	
+});
+</script>
+<!-- refresh menu frame -->
+<script type="text/javascript">
+    var timer;
+    function refreshIframe(){
+    if(timer)
+    clearInterval(timer)
+    timer = setTimeout(refreshIframe,600000)
+    var iframe = document.getElementById('navFrame'); 
+    iframe.src='./core/navigation.php';
+    }
+
+    refreshIframe();
+</script>
+<!-- refresh menu frame -->
+<!-- snow
+<script src="snow/snowstorm.js"></script>
+
+<script>
+	snowStorm.autoStart = true; //Whether the snow should start automatically or not.
+	snowStorm.animationInterval = 33; //Theoretical "milliseconds per frame" measurement. 20 = fast + smooth, but high CPU use. 50 = more conservative, but slower
+	snowStorm.flakeBottom = null; //Limits the "floor" (pixels) of the snow. If unspecified, snow will "stick" to the bottom of the browser window and persists through browser resize/scrolling.
+	snowStorm.flakesMax = 128; //Sets the maximum number of snowflakes that can exist on the screen at any given time.
+	snowStorm.flakesMaxActive = 64; //Sets the limit of "falling" snowflakes (ie. moving on the screen, thus considered to be active.)
+	snowStorm.followMouse = true; //Allows snow to move dynamically with the "wind", relative to the mouse's X (left/right) coordinates.
+	snowStorm.freezeOnBlur = false; //Stops the snow effect when the browser window goes out of focus, eg., user is in another tab. Saves CPU, nicer to user.
+	snowStorm.snowColor = '#99ccff'; //Don't eat (or use?) yellow snow.
+	snowStorm.snowCharacter = '&bull;'; //&bull; (•) = bullet. &middot; entity (·) is not used as it's square on some systems etc. Changing this may result in cropping of the character and may require flakeWidth/flakeHeight changes, so be careful.
+	snowStorm.snowStick = true; //Allows the snow to "stick" to the bottom of the window. When off, snow will never sit at the bottom.
+	snowStorm.targetElement = null; //An HTML element which snow will be appended to (default: document body.) Can be an element ID string eg. 'myDiv', or a DOM node reference. See relative and absolute-positioned examples.
+	snowStorm.useMeltEffect = true; //When recycling fallen snow (or rarely, when falling), have it "melt" and fade out if browser supports it
+	snowStorm.useTwinkleEffect = true; //Allow snow to randomly "flicker" in and out of view while falling
+	snowStorm.usePositionFixed = false; //true = snow not affected by window scroll. may increase CPU load, disabled by default - if enabled, used only where supported.
+	snowStorm.vMaxX = 3;
+	snowStorm.vMaxY = 5;
+	
+	snowStorm.randomizeWind() //Sets the wind speed with a random value relative to vMaxX and vMaxY properties.
+	// snowStorm.freeze() Stops the snow effect in place.
+	// snowStorm.resume() Continues snowing from a "frozen" state.
+	// snowStorm.toggleSnow() Enables or disables the snow effect depending on state, same as calling freeze() or resume().
+	// snowStorm.stop()
+		
+</script>
+-->
+</head>
+<body>	
+	<div id="banner">
+		<iframe id="bannerFrame" name="bannerFrame" src="./core/banner/with-jquery.html" scrolling="no"></iframe>
+	</div> <!-- banner -->
+	
+	<div id="sticky_navigation_wrapper">
+		<div id="sticky_navigation">
+			<div class="demo_container">
+				<div id="navigation">
+					<iframe id="navFrame" name="navFrame" src="./core/navigation.php" scrolling="no"></iframe>
+				</div> <!-- navigation -->
+			</div>
+		</div>
+	</div>
+	
+	<div id="announce">
+		<iframe id="announceFrame" name="announceFrame" src="./core/broadcast.php" scrolling="no"></iframe> 
+	</div>
+	
+	<div id="main">
+		<iframe id="MainFrame" name="MainFrame" src="./core/core.php"></iframe>
+	</div> <!-- main -->
+	<div id="footer">
+		<iframe id="copy" name="copy" src="./core/copy.php" scrolling="no"></iframe>
+	</div> <!-- footer -->
+</body>
+</html>

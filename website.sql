@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `account` (
 DELETE FROM `account`;
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
 INSERT INTO `account` (`username`, `id`, `permission`, `email`, `image`, `vote_points`, `donate_points`) VALUES
-	('brannik', 1, 3, 'georgi.vtu.mi@gmail.com', 'default', 50, 1270),
+	('brannik', 1, 3, '0', 'default', 50, 1270),
 	('player', 2, 0, '0', 'default', 0, 0),
 	('developer', 19, 2, '0', 'default', 0, 0),
 	('player2', 20, 0, '0', 'default', 0, 0),
